@@ -1,0 +1,182 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{ 
+  height: 100vh;
+  /* img source: https://pngtree.com/freebackground/seamless-abstract-pattern-sports-and-fitness-background_1805336.html */
+  background-image: url("/Student-2/Assets/pattern.png"); 
+  background-repeat: repeat;
+  background-size: cover;
+  animation: scroll 50s linear infinite;
+}
+
+/* Reference : https://www.w3schools.com/cssref/css3_pr_animation-keyframes.php */
+@keyframes scroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+.wolf img{ 
+  float: right;
+  width: 38%;
+  margin-top: 8%;
+  position: absolute;
+  animation: animate 1s infinite  alternate;
+  right: 0%;
+  z-index: -1;
+}
+
+/* Reference : https://www.w3schools.com/cssref/css3_pr_animation-keyframes.php */
+@keyframes animate{
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
+
+.covercolor img{
+  float: right;
+  right: 0;
+  top: 0;
+  position: absolute;
+  z-index: -2;
+  opacity: 0.6;
+  width: 85%;
+}
+
+#maintext{
+  padding-top:10% ;
+  padding-left: 5%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 55px;
+  font-weight: 700;
+  width: 100%;
+  margin-bottom: 0%;
+  
+}
+
+#textchange{
+  color: #deaaff;
+}
+
+#textchange::before {
+  content: "Strength";
+  animation: textanimate infinite 8s;
+
+}
+
+
+@keyframes textanimate {
+  
+  25% {
+      content: "Looks";
+  }
+
+  50% {
+      content: "Power";
+  }
+
+  75% {
+      content: "Creativity";
+  }
+}
+
+#text2{
+  padding-left: 5%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  margin-top: 0%
+}
+
+#explorebtn{
+  border-radius: 30px;
+  display: inline-block;
+  color:#b79ced;
+  padding: 10px 30px;
+  text-decoration: none;
+  transition: all .4s ease-in-out;
+  margin-left: 5%;
+  margin-top:3% ;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  border-color: #b79ced;
+  border-style: solid;
+
+}
+
+#explorebtn:hover{
+  transform: scale(1.1);
+  display: inline-block;
+}
+
+.contentdiv{
+  background-color: rgba(183, 156, 237, 0.3);
+  width: 100%;
+  padding: 50px;
+  text-align: center;
+}
+
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 22%;
+  background-color: white;
+  border-radius: 25px;
+  display: inline-block;
+  margin: 1%;
+}
+
+.card img{
+  width: 70%;
+}
+
+.card:hover {
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.3);
+}
+
+.card-container{
+  padding: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  .card-container .navbar .card-container{
+    width: 100%;
+    display: block;
+  }
+}
+
+#page1{
+  height: 101.5vh;
+}
+
+.sololink{
+  text-decoration: none;
+  color: black;
+}
+
+.footer{
+  text-align: center;
+  background-color: #b79ced;
+  padding: 50px;
+  font-weight: 200;
+}
+
+.footer a{
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--External CSS -->
+
+    <link rel="stylesheet" href="Css/buyProductStyle.css">
+    <link rel="icon" type="image/x-icon" href="/Student-2/Assets/tonicicon.ico">
+
+    <!--Font awesome site for fonts-->
+    <script src="https://kit.fontawesome.com/1786b54536.js" crossorigin="anonymous"></script>
+    
+    <title>Buy Product</title>
+</head>
+<body>
+    <script src="Js/buy.js"></script>
+
+    <section id="page-one"> <!-------------------Section for navbar------------------->
+        
+        <div class="header">
+            <div class="logo">
+                <a href="/Student-2/Index.html"><img src="Images/toniclogo.png" width="90" alt="logo"></a>
+            </div>
+            <ul class="navbar"> 
+                <li><a id="shop" href="/Student-1/buy.html">Shop</a></li>
+                <li><a class="underline" href="/Student-2/Index.html">Home</a></li>
+                <li><a class="underline" href="/Student-2/comments.html">Comments</a></li>
+                <li><a class="underline" href="/Student-3/quiz.html">Quiz</a></li>
+                <li><a class="underline" href="/Student-4/sitemap.html">Site Map</a></li>
+                <li><a class="underline" href="/Student-4/image-gallery.html">Gallery</a></li>
+                <li><a class="underline" href="/Student-3/student_details.html">About Us</a></li> 
+                <li><i class="fa-solid fa-cart-shopping" id="cart-icon" onclick="cartOpen()"></i></li>                             
+            </ul> 
+        </div>
+        <h1>Tonic Sports</h1>
+
+    </section>
+    <section id="page-two" >    <!------------------- This section is for displaying products ------------------->
+
+        <div class="container">     <!---------- All the images are copyright free and they have been taken from   : https://pixabay.com/ ---------------->
+                                  
+                <div class="items">
+                    <img src="Images/optimized_large_thumb_387-el.jpg" alt="skateboard">   
+                    <p>
+                        <button onclick="totalClicks(-1,'clickChanges1','price1','result1')">-</button>
+                        <span class="clickChanges1"> 0 </span>
+                        <button onclick="totalClicks(1,'clickChanges1','price1','result1')">+</button>
+                    </p>
+                    <br>
+                    <p>
+                        LKR <span class="price1">150</span>/Piece
+                    </p>
+                    <br>
+                    <p>
+                        <a>Skateboard</a>
+                    </p>
+                </div>
+                <div class="items">
+                    <img src="Images/hockey-stick-gcc21609fd_1280.png" alt="hockey stick">
+                    <p>
+                        <button onclick="totalClicks(-1,'clickChanges2','price2','result2')">-</button>
+                        <span class="clickChanges2"> 0 </span>
+                        <button onclick="totalClicks(1,'clickChanges2','price2','result2')">+</button>
+                    </p>
+                    <br>
+                    <p>
+                        LKR <span class="price2">250</span>/Piece
+                    </p>
+                    <br>
+                    <p>
+                        <a>Hockey Sticks</a>
+                    </p>
+                </div>
+            
+                <div class="items">
+                    <img src="Images/football-gc838852f0_1920.jpg" alt="football">
+                    <p>
+                        <button onclick="totalClicks(-1,'clickChanges3','price3','result3')">-</button>
+                        <span class="clickChanges3"> 0 </span>
+                        <button onclick="totalClicks(1,'clickChanges3','price3','result3')">+</button>
+                    </p>
+                    <br>
+                    <p>
+                        LKR <span class="price3">300</span>/Piece
+                    </p>
+                    <br>
+                    <p>
+                        <a >Football</a>
+                    </p>
+                </div>
+                <div class="items">
+                    <img src="Images/fins.jpg" alt="diving fins">
+                    <p>
+                        <button onclick="totalClicks(-1,'clickChanges4','price4','result4')">-</button>
+                        <span class="clickChanges4"> 0 </span>
+                        <button onclick="totalClicks(1,'clickChanges4','price4','result4')">+</button>
+                    </p>
+                    <br>
+                    <p>
+                        LKR <span class="price4">450</span>/Pair
+                    </p>
+                    <br>
+                    <p>
+                        <a >Diving Fins</a>
+                    </p>
+                </div>
+       
+                
+                <div class="items">
+                    <img src="Images/shoe.jpg" alt="roller blades">
+                    <p>
+                        <button onclick="totalClicks(-1,'clickChanges5','price5','result5')">-</button>
+                        <span class="clickChanges5"> 0 </span>
+                        <button onclick="totalClicks(1,'clickChanges5','price5','result5')">+</button>
+                    </p>
+                    <br>
+                    <p>
+                        LKR <span class="price5">400</span>/Pair
+                    </p>
+                    <br>
+                    <p>
+                        <a>Roller Blades</a>
+                    </p>
+                </div>
+                <div class="items">
+                    <img src="Images/goggle-ge04148b30_1280.png" alt="goggles">
+                    <p>
+                        <button onclick="totalClicks(-1,'clickChanges6','price6','result6')">-</button>
+                        <span class="clickChanges6"> 0 </span>
+                        <button onclick="totalClicks(1,'clickChanges6','price6','result6')">+</button>
+                    </p>
+                    <br>
+                    <p>
+                        LKR <span class="price6">400</span>/Piece
+                    </p>
+                    <br>
+                    <p>
+                        <a>Goggles</a>
+                    </p>
+                </div>
+        </div>
+
+          <!----------------- Add to cart part where selected products with there quantity and price are shown ----------------->  
+
+        <div class="card">
+            <h2 style="color: blue;">Cart</h2>
+            <table class="table" >
+        
+                <tr>
+                    <td>Skateboard<span>x</span><span class="clickChanges1">0</span></td>
+                    <td> = </td>
+                    <td><span id="result1">0</span></td>
+                    <td><span style="color:red"> LKR</span></td>
+                </tr>
+                
+                <tr>
+                    <td>Hockey stick<span>x</span><span class="clickChanges2">0</span></td>
+                    <td> = </td>
+                    <td><span id="result2">0</span></td>
+                    <td><span style="color:red"> LKR</span></td>
+                </tr>
+                <tr>
+                    <td>Football<span>x</span><span class="clickChanges3">0</span></td>
+                    <td> = </td>
+                    <td><span id="result3">0</span></td>
+                    <td><span style="color:red"> LKR</span></td>
+                </tr>
+                <tr>
+                    <td>diving fins<span>x</span><span class="clickChanges4">0</span></td>
+                    <td> = </td>
+                    <td><span id="result4">0</span></td>
+                    <td><span style="color:red"> LKR</span></td>
+                </tr>
+                <tr>
+                    <td>Rollerblades<span>x</span><span class="clickChanges5">0</span></td>
+                    <td> = </td>
+                    <td><span id="result5">0</span></td>
+                    <td><span style="color:red"> LKR</span></td>
+                </tr>
+                <tr>
+                    <td>Goggles<span>x</span><span class="clickChanges6">0</span></td>
+                    <td> = </td>
+                    <td><span id="result6">0</span></td>
+                    <td><span style="color:red"> LKR</span></td>
+                </tr>
+            </table>
+            <hr>
+            <div class="total-div">
+                
+                <strong>Total = <span style="color:red">LKR </span></strong><span id="totalCost" >0</span>
+                
+            </div>
+            
+           <form action="payment.html" id="form" method="get">
+            <div class="userDetails">
+                <label for="userName">Name &nbsp;&nbsp;&nbsp;</label>
+                <input type="text" id="userName" placeholder="Enter Name"><br><br>
+                <label for="email">Contact </label>
+                <input type="email" name="email" id="email" placeholder="Enter Email Id">
+            </div>
+            <div class="buttons">
+                <div class="place-order" >
+                    <input type="button" value="Place Your Order" id="place-order-button" onclick="passDataToPaymentPage()">
+                    <!-- <a id="btn" onclick="passDataToPaymentPage()">Place your order</a> -->
+                    
+                </div>
+                
+                <div class="cancel-order">
+                    <a href="">Cancel your order</a>
+                </div>
+            </div>
+           </form>
+            <i class="fa-sharp fa-solid fa-xmark" id="cart-remove" onclick="cartClose()"></i>
+        </div>
+
+        <!-------------------Error notification showing part------------------->
+
+       <div class="error-message-name"></div>
+    </section>
+
+    <section id="page3">
+
+    </section>
+    <footer style="font-family: 'Poppins'">
+        <p>Thank you for using !!</p>
+        <small>Developed by, <a id="footerId" href="pageEditor.html">Aashif Ameer</a></small>
+    </footer>
+</body>
+</html>

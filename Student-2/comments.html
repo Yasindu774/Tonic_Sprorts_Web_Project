@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    <link rel="icon" type="image/x-icon" href="/Student-2/Assets/tonicicon.ico">
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="CSS-files/navbar.css">
+    <link rel="stylesheet" href="CSS-files/comments.css">
+    <!-- External fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="page-1">
+        <!-- Navigation Bar -->
+        <div class="header">
+            <div class="logo">
+                <a href="/Student-2/Index.html"><img src="Assets/tonic-logo.png" width="90" alt="logo"></a>
+            </div>
+            <ul class="navbar"> 
+                <li><a id="shop" href="/Student-1/buy.html">Shop</a></li>
+                <li><a class="underline" href="/Student-2/Index.html">Home</a></li>
+                <li><a class="underline" href="/Student-2/comments.html">Comments</a></li>
+                <li><a class="underline" href="/Student-3/quiz.html">Quiz</a></li>
+                <li><a class="underline" href="/Student-4/sitemap.html">Site Map</a></li>
+                <li><a class="underline" href="/Student-4/image-gallery.html">Gallery</a></li>
+                <li><a class="underline" href="/Student-3/student_details.html">About Us</a></li>                              
+            </ul>
+        </div>
+    </section>
+    <section id="page-2">
+        <!-- Div containing Form -->
+        <div class="popup" id="popupbox">
+            <!-- Div after submission -->
+            <div class="thanks" id="thanks">
+                <h1>Thank You!</h1>
+                <h2>Your form submitted successfully.</h2>
+            </div>
+            <!-- Form -->
+                <form id="form">
+                    <div class="cards" id="ratingcard">
+                        <span>How satisfied were you with our website today? Choose from 1 to 10, where 1 is extremely dissatisfied and 10 is extremely satisfied.</span>
+                        <span id="required" style="color: red;"></span>
+                        <table>
+                            <tr class="labels">
+                                <td><label for="radio-1">1</label></td>
+                                <td><label for="radio-2">2</label></td>
+                                <td><label for="radio-3">3</label></td>
+                                <td><label for="radio-4">4</label></td>
+                                <td><label for="radio-5">5</label></td>
+                                <td><label for="radio-6">6</label></td>
+                                <td><label for="radio-7">7</label></td>
+                                <td><label for="radio-8">8</label></td>
+                                <td><label for="radio-9">9</label></td>
+                                <td><label for="radio-10">10</label></td>   
+                            </tr>
+                            <tr class="radio-btn">
+                                <td><input type="radio" name="radio-btn" id="radio-1" value="1"></td>
+                                <td><input type="radio" name="radio-btn" id="radio-2" value="2"></td>  
+                                <td><input type="radio" name="radio-btn" id="radio-3" value="3"></td>  
+                                <td><input type="radio" name="radio-btn" id="radio-4" value="4"></td>  
+                                <td><input type="radio" name="radio-btn" id="radio-5" value="5"></td>  
+                                <td><input type="radio" name="radio-btn" id="radio-6" value="6"></td>                         
+                                <td><input type="radio" name="radio-btn" id="radio-7" value="7"></td>  
+                                <td><input type="radio" name="radio-btn" id="radio-8" value="8"></td>  
+                                <td><input type="radio" name="radio-btn" id="radio-9" value="9"></td>  
+                                <td><input type="radio" name="radio-btn" id="radio-10" value="10"></td> 
+                            </tr>
+                        </table>   
+                    </div>
+                    <div class="cards" id="textarea">
+                        <label for="textarea-1">Please could you tell us your reasons for giving this rating?</label>
+                        <span id="required2" style="color: red;"></span>
+                        <textarea name="textarea-1" id="textarea-1" rows="2" placeholder="Type your answer here..."></textarea>
+                    </div>
+                    <div class="cards">
+                        <label for="mode-1">How did you want to complete this task today? (optional)</label>
+                        <select name="mode" id="mode-1">
+                            <option value="" disabled selected hidden>--Please Select--</option>
+                            <option value="phone">Phone</option>
+                            <option value="website">Website</option>
+                            <option value="webchat">Webchat</option>
+                            <option value="socialmedia">Social Media</option>
+                            <option value="email">Email</option>
+                        </select>
+                    </div>
+                    <div class="cards">
+                        <label for="mode-2">If you had to complete this task again, how would you prefer to do it? (optional)</label>
+                        <select name="mode" id="mode-2">
+                            <option value="" disabled selected hidden>--Please Select--</option>
+                            <option value="phone">Phone</option>
+                            <option value="website">Website</option>
+                            <option value="webchat">Webchat</option>
+                            <option value="socialmedia">Social Media</option>
+                            <option value="email">Email</option>
+                        </select>
+                    </div>
+                    <div class="btns">
+                        <input type="button" value="Submit" onclick="validateForm()">
+                        <input type="reset" value="Reset">
+                    </div>    
+                </form>
+        </div>
+        <!-- Footer -->
+        <section id="page-3">
+            <div class="footer">
+                <footer> <p>Developed by <a href="pageeditor.html">Dineth Jay</a></p></footer>
+            </div>
+        </section>
+
+    </section>
+    <!-- External JavaScript -->
+    <script src="JS-files/commentsscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    background: #f9f9f9;
+    min-height: 100vh;
+    overflow-x:hidden;
+}
+
+/*Reference: https://www.youtube.com/watch?v=1wfeqDyMUx4 */
+.parallax{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh ;
+}
+
+#text{
+    position: absolute;
+    font-size: 5em;
+    color: white;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.1) ;
+}
+
+.anchor{
+  position: absolute;
+  border-radius: 30px;
+  color:white;
+  background-color:#deaaff ;
+  padding: 10px 30px;
+  text-decoration: none;
+  transition: all .4s ease-in-out;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  box-shadow: rgb(0, 0, 0, 0.1);
+  margin-top: 10%;
+}
+.anchor:hover {
+  background-color: #b388eb;
+}
+
+.parallax img{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.sec{
+    position: relative;
+    background: #deaaff;
+    padding: 100px;
+    margin-top: 6%;
+}
+
+.sec h2{
+    font-size: 2.5em;
+    color: white;
+    text-align: center;
+}
+
+/* horizontally floating 4 cards */
+.sports {
+  float: left;
+  padding: 0 10px;
+  margin-top: 5%;
+  width: 25%;
+}
+
+/* margin removing due to padding */
+.cardrow {
+  margin: 0 -5px;
+  padding: 20px;
+}
+
+/* after sports div clearing floats */
+.cardrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 600px) {
+  .sports {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: white;
+  font-size: 1em;
+  border-radius: 25px;
+}
+
+.card img{
+  width: 50%;
+}
+
+.footer{
+  text-align: center;
+  background-color: #b79ced;
+  padding: 50px;
+  font-weight: 200;
+  margin-bottom: 0;
+}
+
+.footer a{
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+}
+
+.btn a{
+  border-radius: 30px;
+  display: inline-block;
+  color:#b79ced;
+  padding: 8px 15px;
+  text-decoration: none;
+  transition: all .4s ease-in-out;
+  margin-top:3% ;
+  font-size: 15px;
+  border-color: #b79ced;
+  border-style: solid;
+}
+
+.btn a:hover{
+  transform: scale(1.1);
+  display: inline-block;
+}

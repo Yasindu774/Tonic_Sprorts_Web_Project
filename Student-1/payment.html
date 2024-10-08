@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+
+    <!--External CSS -->
+    
+    <link rel="stylesheet" href="Css/paymentStyle.css">
+    <link rel="stylesheet" href="Css/navBarStyle.css">
+    <script src="https://kit.fontawesome.com/1786b54536.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="/Student-2/Assets/tonicicon.ico">
+
+</head>
+<body onload="load()">
+
+  <script src="Js/payment.js"></script>
+
+  <!----------------------------- Navigation Bar------------------------------>
+  
+  <div class="header">
+    <div class="logo">
+        <a href="/Student-2/Index.html"><img src="Images/toniclogo.png" width="90" alt="logo"></a>
+    </div>
+    <ul class="navbar"> 
+      <li><a id="shop" href="/Student-1/buy.html">Shop</a></li>
+      <li><a class="underline" href="/Student-2/Index.html">Home</a></li>
+      <li><a class="underline" href="/Student-2/comments.html">Comments</a></li>
+      <li><a class="underline" href="/Student-3/quiz.html">Quiz</a></li>
+      <li><a class="underline" href="/Student-4/sitemap.html">Site Map</a></li>
+      <li><a class="underline" href="/Student-4/image-gallery.html">Gallery</a></li>
+      <li><a class="underline" href="/Student-3/student_details.html">About Us</a></li>                              
+  </ul>
+</div>
+  <!----------------------------------------------------------------------------->
+
+
+  <div class="container">
+
+      <!-- Order details will be shown here-->
+
+      <div class="order-details">
+          <div class="half-width">
+            <h3>Order Summary</h3><br>
+            <strong class="order-details">References &nbsp;: </strong><span id="auto-reference"></span><br>
+            <strong class="order-details">Description &nbsp;: </strong><span>Make payment</span><br>
+            <strong class="order-details">Amount &emsp;&emsp;:</strong>LKR&nbsp;<span id="total-amount">0</span>
+          </div>
+      </div>
+
+      <!-- Payment details will be shown in this part -->
+
+      <div class="payment-details">
+          <div class="half-width" id="payment-details-heading"><h3>Payment Details</h3><h6 style="color:orange;">* Indicates a required field</h6><img src="Images/card_img.png" style="width:25%" alt="cards"></div>
+          
+          <!--first row (card number and card holder name)-->
+
+          <div class="first-row">
+              <div class="half-width">
+                <strong>Card Number<span class="star"> * </span><span id="right-icon1"><i class="fa-solid fa-circle-check"></i></span></strong>
+                <input type="password" placeholder="XXXX-XXXX-XXXX-XXXX" class="form-control" id="cardNumber" onkeyup="rightButtoncheck('cardCheck')" required />
+              </div>
+
+              <div class="half-width">
+                <strong>Name on Card<span class="star"> * </span><span id="right-icon2"><i class="fa-solid fa-circle-check"></i></span></strong>
+                <input type="text" id="card-name" name="card-name" required placeholder="Enter Card Owner's Name" onkeyup="rightButtoncheck('cardNameCheck')">
+              </div>
+          </div>
+           <!------------------------------------------------->
+
+           <!-- Second row (Expiry date , cvv code and images)-->
+
+          <div class="second-row">
+              <div class="half-width" id="selection">
+                <strong>Expiration Date<span class="star"> * </span><span id="right-icon3"><i class="fa-solid fa-circle-check"></i></span></strong><br>
+                <select id="expiry-month" name="expiry-month" onchange="rightButtoncheck('ExpDateCheck')" required>
+                  <option value="">Month</option>
+                  <option value="01">January</option>
+                  <option value="02">February</option>
+                  <option value="03">March</option>
+                  <option value="04">April</option>
+                  <option value="05">May</option>
+                  <option value="06">June</option>
+                  <option value="07">July</option>
+                  <option value="08">August</option>
+                  <option value="09">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
+                </select>
+                <select id="expiry-year" name="expiry-year" onchange="rightButtoncheck('ExpDateCheck')" required>
+                  <option value="">Year</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                  <option value="2029">2029</option>
+                  <option value="2030">2030</option>
+                </select>
+            </div>
+            <div class="half-width">
+                <strong>CVC Number<span class="star"> * </span><span id="right-icon4"><i class="fa-solid fa-circle-check"></i></span></strong><br>
+                <input type="text" id="cvc-number" name="cvc-number" required placeholder="Back of your card" onkeyup="rightButtoncheck('cvvCodeCheck')"> 
+            </div>
+            <div class="cvv"><br>
+                <img src="Images/cheque-guarantee-card-g8e8e25d76_1280.png" alt="cvv" style="width:40%;height:12vh;">
+                <h6 style="color:red">*Last 3 digits on the back of the card</h6>
+            </div>
+          </div>  
+        </div>
+        <!----------------------------------------------------------------->
+
+        <!----------------------Billing address details will be shown here------------------------->
+
+        <div class="billing-head">
+          <div class="half-width"><h3>Billing Address <span><i id="bill-right-icon" class="fa-solid fa-circle-check"></i></span></h3></div>
+            <div class="address-expand">
+              <div class="half-width"><p id="bill-address"></p></div>
+              <div class="half-width"><strong id="edit-icon" onclick="billingDropdownAdd()"><span id="edit-text">Edit </span><i class="fa-solid fa-caret-down" id="icon"></i></strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="billing-details" id="billing-details">
+          
+          <!-- Third row (Address 1 and Address 2)-->
+
+          <div class="third-row">
+              <div class="half-width">
+                <strong>Address 1<span class="star"> *</span></strong><br>
+                <input type="text" id="address1" name="address1" required placeholder="Enter Your Address 1">
+              </div>
+              <div class="half-width">
+                <strong>Address 2</strong><br>
+                <input type="text" id="address2" name="address2" required placeholder="Enter Your Address 2">
+              </div>
+          </div>
+
+          <!-- Fourth row (Address 3 and Town/city)-->
+
+          <div class="fourth-row">
+              <div class="half-width">
+                <strong>Address 3</strong><br>
+                <input type="text" id="address3" name="address3" required placeholder="Enter Your Address 3">
+              </div>
+              <div class="half-width">
+                <strong>Town/City<span class="star"> *</span></strong><br>
+                <input type="text" id="town-city" name="town-city" required placeholder="Enter Your Home Town">
+              </div>
+          </div>
+
+          <!-- Fifth row (State and postalcode 2)-->
+
+          <div class="fifth-row">
+              <div class="half-width">
+                <strong>State/Region</strong><br>
+                <input type="text" id="state" name="state" required placeholder="Enter Your State">
+              </div>
+              <div class="half-width">
+                <strong>Postalcode/Zip code<span class="star"> *</span></strong><br>
+                <input type="text" id="postal-code" name="postal-code" required placeholder="Enter Your Region's Postal Code">
+              </div>
+          </div>
+          
+          <div class="half-width" id="bill-country">
+              <strong>Country<span class="star"> *</span></strong><br>
+              <input type="text" id="country" name="country" required>
+          </div>
+          <div class="save-close-buttons">
+            <div class="half-width">
+              <a onclick="billingDropdownHide()">Cancel</a>  
+            </div>
+            <div class="half-width">
+              <!-- <a href="" onclick="validate()">Pay Now</a> -->
+              <input type="submit" onclick="validateBill()" value="Save Changes">
+            </div>
+         </div>
+        </div>
+
+        <!--Contact detail and information will be shown here-->
+
+        <div class="contact-details">
+          <div class="half-width"><h3>Contact Details <span id="contact-right-icon"><span><i class="fa-solid fa-circle-check"></i></span></span></h3></div>
+
+          <div class="contact-expand">
+              <div class="half-width"><p id="bill-contact"></p></div>
+              <div class="half-width"><strong id="edit-icon2" onclick="contactDropdownAdd()"><span id="edit-text2">Edit </span><i class="fa-solid fa-caret-down" id="icon2"></i></strong></div>
+          </div>
+
+          <div class="sixth-row">
+              <div class="half-width">
+                <strong>Phone number<span class="star"> *</span></strong><br>
+                <input type="text" id="mobile" name="mobile" required placeholder="Enter Your Mobile Number">
+              </div>
+              <div class="half-width">
+                <strong>Email address</strong><br>
+                <input type="email" id="email" name="email" required placeholder="Enter Your Email ID">
+              </div>
+          </div>
+
+          <div class="seventh-row">
+              <div class="save-close-buttons">
+                <div class="half-width">
+                  <a onclick="contactDropdownHide()">Cancel</a>  
+                </div>
+                <div class="half-width">
+                  <!-- <a href="" onclick="validate()">Pay Now</a> -->
+                  <input type="submit" onclick="validateContact()" value="Save Changes">
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <!--Buttons for payment-->
+
+       <div class="payment-buttons">
+          <div class="half-width">
+            <a href="buy.html">Cancel</a>  
+          </div>
+          <div class="half-width">
+            <!-- <a href="" onclick="validate()">Pay Now</a> -->
+            <input type="submit" onclick="validate()" value="Pay Now" id="pay-now">
+          </div>
+       </div>
+
+       <div class="footer">
+        <h6>When you submit your transaction for processing by AashPay, You confirm your acceptence of <a href="" style="color:white;">AashPay's privacy policy</a></h6>
+        <br><h6>	&#169; AashPay 2000 - 2023. All rights reserved.</h6>
+      </div>
+    </div>
+
+    <!-- Validation error notification part -->
+
+    <div class="error-notification"></div>
+   
+</body>
+</html>

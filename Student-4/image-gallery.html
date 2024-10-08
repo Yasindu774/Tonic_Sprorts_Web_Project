@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Reference for Poppins font - https://www.w3schools.com/howto/tryit.asp?font=Poppins -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="styles/style-image-gallery.css">
+    <link rel="stylesheet" href="styles/nevbar.css">
+    <link rel="icon" type="image/x-icon" href="/Student-2/Assets/tonicicon.ico">
+    <title>Image-Gallery</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="/Student-2/Index.html"><img src="images/toniclogo.png" width="90" alt="logo"></a>
+        </div>
+        <ul class="navbar"> 
+            <li><a id="shop" href="/Student-1/buy.html">Shop</a></li>
+            <li><a class="underline" href="/Student-2/Index.html">Home</a></li>
+            <li><a class="underline" href="/Student-2/comments.html">Comments</a></li>
+            <li><a class="underline" href="/Student-3/quiz.html">Quiz</a></li>
+            <li><a class="underline" href="/Student-4/sitemap.html">Site Map</a></li>
+            <li><a class="underline" href="/Student-4/image-gallery.html">Gallery</a></li>
+            <li><a class="underline" href="/Student-3/student_details.html">About Us</a></li>                              
+        </ul>
+    </div>
+    <div class="container" id="blur">
+        <div class="bg-color">
+            <span id="3" onclick="color(this)" class="color clr3"></span>
+            <span id="2" onclick="color(this)" class="color clr2"></span>
+            <span id="1" onclick="color(this)" class="color clr1"></span>
+            <!-- Reference for changing Randomly Background color using HEX values - https://www.w3resource.com/javascript-exercises/javascript-math-exercise-40.php -->
+            <button id="random" onclick="getRandomColor()">Get Random Color</button>
+        </div>
+        <div class="title">
+            <h3>Photo <span>Gallery</span></h3>
+        </div>
+        <!-- Reference for Image Gallery layout - https://www.w3schools.com/howto/howto_js_image_grid.asp -->
+        <!-- Reference for Images - https://www.pexels.com/ -->
+        <!-- Reference for Blur Background - https://www.w3schools.com/howto/howto_css_blurred_background.asp -->
+        <div class="gallery" >
+            <div>
+                <a href="#" onclick="toggle('Football');"><img src="images/image-gallery/1.jpg" alt=""></a>
+            </div>
+            <div class="x-axis">
+                <a href="#" onclick="toggle('Basketball');"><img src="images/image-gallery/2.jpg" alt=""></a>
+            </div>
+            <div class="y-axis">
+                <a href="#" onclick="toggle('Swimming');"><img src="images/image-gallery/3.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="#" onclick="toggle('Baseball');"><img src="images/image-gallery/4.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="#" onclick="toggle('Cycling');"><img src="images/image-gallery/5.jpg" alt=""></a>
+            </div>
+            <div class="y-axis"> 
+                <a href="#" onclick="toggle('IceSurf');"><img src="images/image-gallery/6.jpg" alt=""></a>
+            </div>
+            <div class="main-image"> 
+                <a href="#" onclick="toggle('Badminton');"><img src="images/image-gallery/7.jpg" alt=""></a>
+            </div>
+            <div> 
+                <a href="#" onclick="toggle('Boxing');"><img src="images/image-gallery/8.jpg" alt=""></a>
+            </div>
+            <div class="x-axis"> 
+                <a href="#" onclick="toggle('Hill Climb');"><img src="images/image-gallery/9.jpg" alt=""></a>
+            </div>
+            <div> 
+                <a href="#" onclick="toggle('American Football');"><img src="images/image-gallery/10.jpg" alt=""></a>
+            </div>
+            <div> 
+                <a href="#" onclick="toggle('Tennis');"><img src="images/image-gallery/11.jpg" alt=""></a>
+            </div>
+            <div> 
+                <a href="#" onclick="toggle('Swimming');"><img src="images/image-gallery/12.jpg" alt=""></a>
+            </div>
+            <div class="y-axis"> 
+                <a href="#" onclick="toggle('Vollyball');"><img src="images/image-gallery/13.jpg" alt=""></a>
+            </div>
+            <div> 
+                <a href="#" onclick="toggle('Athletic');"><img src="images/image-gallery/14.jpg" alt=""></a>
+            </div>
+            <div class="main-image"> 
+                <a href="#" onclick="toggle('Surf');"><img src="images/image-gallery/15.jpg" alt=""></a>
+            </div>
+            <div> 
+                <a href="#" onclick="toggle('Boat Riding');"><img src="images/image-gallery/16.jpg" alt=""></a>
+            </div>
+            <div class="x-axis"> 
+                <a href="#" onclick="toggle('Cricket');"><img src="images/image-gallery/17.jpg" alt=""></a>
+            </div>
+            <div> 
+                <a href="#" onclick="toggle('Bike Racing');"><img src="images/image-gallery/18.jpg" alt=""></a>
+            </div>
+            <div class="main-image"> 
+                <a href="#" onclick="toggle('Bike Racing');"><img src="images/image-gallery/19.jpg" alt=""></a>
+            </div>
+            <div> 
+                <a href="#" onclick="toggle('IceSurf');"><img src="images/image-gallery/20.jpg" alt=""></a>
+            </div>
+            <div> 
+                <a href="#" onclick="toggle('Marathon');"><img src="images/image-gallery/21.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <!-- Reference for popup text box - https://youtu.be/snhpoxtLugU -->
+    <div id="popup">
+        <div class="wrapper">
+            <div class="buttons">
+                <span id="btn1" class="btn active" onclick="document.getElementById('text-para').style.fontSize = '0.8em';document.getElementById('text-heading').style.fontSize = '1em';document.getElementById('btn1').style.backgroundColor='blue';document.getElementById('btn2').style.backgroundColor='#515151';document.getElementById('btn3').style.backgroundColor='#515151'">A</span>
+                <span id="btn2" class="btn" onclick="document.getElementById('text-para').style.fontSize = '1.25em';document.getElementById('text-heading').style.fontSize = '1.5em';document.getElementById('btn2').style.backgroundColor='blue';document.getElementById('btn1').style.backgroundColor='#515151';document.getElementById('btn3').style.backgroundColor='#515151'">A</span>
+                <span id="btn3" class="btn" onclick="document.getElementById('text-para').style.fontSize = '1.75em';document.getElementById('text-heading').style.fontSize = '2em';document.getElementById('btn3').style.backgroundColor='blue';document.getElementById('btn1').style.backgroundColor='#515151';document.getElementById('btn2').style.backgroundColor='#515151'">A</span>
+            </div>
+            <div class="content">
+                <h2 id="text-heading" style="font-size: xx-large;">Lorem ipsum</h2>
+                <br>
+                <p id="text-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius tellus quis leo bibendum ultricies. 
+                Nullam vestibulum pulvinar ante. Curabitur id pulvinar lectus, porttitor pretium metus. 
+                In id sem sit amet augue mattis tristique non vitae massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec justo nisl, blandit vel congue posuere, tincidunt et ipsum. Cras mollis lacinia ante. 
+                Nulla fringilla eros eu dui vehicula.
+                </p>
+                
+                <a href="#" id="close-popup" onclick="toggle()">Close</a>
+            </div>   
+        </div>  
+    </div>
+    <br>
+    <footer style="font-family: 'Poppins'">
+        <p>Wish you luck!!</p>
+        <small>Developed by, <a id="footerId" href="page-editor-st4.html">Yasindu Anushka</a></small>  
+    </footer>
+    <script src="scripts/script-image-gallery.js"></script>
+</body>
+</html>

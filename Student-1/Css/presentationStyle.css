@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script&family=Mrs+Saint+Delafield&family=Poppins:wght@300&family=Secular+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+#first-page{
+    height: 110vh;
+    width: 100%;
+    /* background-attachment: fixed; */
+}
+#first-page{
+    /* background:radial-gradient(#281c32,#0f0510); */
+    background-image: url('/Images/background-g32aa94af5_1280.jpg');
+    background-size: cover;
+}
+#first-page h1{
+  position: absolute;
+  top: 15%;
+  left: 35%;
+  text-align: center;
+  color: #969191;
+  font-size: 80px;
+}
+  /*----- Student Container -----*/
+.container{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top: 30%;
+    left: 31%;
+    margin: auto;
+    height: 64vh;
+    width: 95%;
+    gap: 1.6rem;
+    transform: translate(-30%);
+    display: flex;    
+}
+.container .stud-type,.container h3{
+  padding: 1rem;
+  font-weight: 900;
+}
+.container h3{
+  color: #8130dd;
+   
+}
+hr.line{
+  border: 2px solid #fff;
+}
+.members{
+    border-radius: 15px;
+    height:100%;
+    width: 100%;
+    box-shadow: 13px 13px 20px #cbced1 , -13px -13px 20px #fff;  
+    background-color: #bad5f0;  
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: .4s;
+}
+.members:hover{
+  transform: scale(0.9);
+}
+.img{
+  /* background-color: rgb(255, 255, 255); */
+  background:radial-gradient(#281c32,#0f0510);
+  box-shadow: 13px 13px 20px #a6a8ad , -13px -13px 20px #969191;  
+  border-radius: 25px;
+  padding: 0.2rem;
+}
+.image{
+  width: 100%;
+  height: 45vh;
+  border-radius: 25px;
+  transition: .4s;
+}
+.image:hover{
+  transform: scale(1.3);
+}

@@ -1,0 +1,143 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url("/Student-2/Assets/pattern.png");
+}
+
+.main{
+    min-height: 100vh;
+}
+
+.popup{
+    margin-top: 10%;
+    margin: auto;
+    margin-bottom: 5%;
+    width: 50%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px 5px rgb(0, 0, 0, 0.1);
+  }
+
+#page-1{
+    height: 20vh;
+}
+
+.popup > * {
+    margin: 15px 0px;
+}
+
+.cards{
+    margin: auto;
+    display: block;
+    box-shadow:0px 0px 8px 0px rgb(0, 0, 0, 0.1);
+    position: relative;
+    width: 90%;
+    padding: 3% 1%;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 2%;
+    border-radius: 15px;
+}
+
+input[type=text],select,textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 30px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+table{
+    margin: auto;
+    text-align: center;
+    padding-top:5% ;
+}
+
+td{
+    padding: 10px;
+}
+
+input[type=button]{
+    border-radius: 30px;
+    color:white;
+    background-color:#deaaff ;
+    padding: 10px 30px;
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    box-shadow: rgb(0, 0, 0, 0.1);
+}
+
+input[type=reset]{
+    border-radius: 30px;
+    display: inline-block;
+    color:#deaaff;
+    background-color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    border-color: #deaaff;
+    border-style: solid;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: #b388eb;
+}
+
+input[type=reset]:hover {
+    border-color: #b388eb;
+    color:#b388eb ;
+}
+
+.btns{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.thanks{
+    margin: auto;
+    display: block;
+    box-shadow:0px 0px 8px 0px rgb(0, 0, 0, 0.1);
+    position: relative;
+    width: 90%;
+    padding: 3% 1%;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 2%;
+    border-radius: 15px;
+    text-align: center;
+    display: none;
+}
+
+#sololink{
+    text-decoration: none;
+    color: black;
+}
+
+.footer{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #b79ced;
+    padding: 50px;
+    font-weight: 200;
+    bottom: 0;
+}
+  
+.footer a{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}

@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url("/Student-2/Assets/pattern.png");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.profile{
+    text-align: center; 
+    margin-top: 7%;
+    box-shadow: rgba(0, 0, 0, 0.3);
+}
+
+.sec2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh ;
+}
+
+#name{
+    font-size: 5em;
+}
+
+.aboutcards{
+    margin: auto;
+    margin-top: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 900px;
+    border-radius: 5px; 
+    padding: 10px;
+    border-radius: 20px;
+    background-color:rgba(255, 255, 255, 0.6)
+}
+
+.aboutcards:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.aboutcontainer{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+    background-color:rgba(255, 255, 255, 0.6)
+}
+
+.aboutcontainer img{
+    border-radius: 20px 20px 0 0;
+}
+
+.abouttext ul{
+    margin-top: 2%;
+    font-size: 15px;
+    font-weight: 300;
+    width: 50vh;
+    margin: auto;
+    width: 80%;
+}
+
+.profilebtn{
+    padding: 30px;
+}
+
+.profile .button{
+    border-radius: 30px;
+    color:white;
+    background-color:#deaaff ;
+    padding: 10px 30px;
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    box-shadow: rgb(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #b388eb;
+}   
+
+#lastcard{
+    margin-bottom: 5%;
+}
+
+.footer{
+    text-align: center;
+    background-color: #b79ced;
+    padding: 50px;
+    font-weight: 200;
+}
+  
+.footer a{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+
+.pagelink{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}

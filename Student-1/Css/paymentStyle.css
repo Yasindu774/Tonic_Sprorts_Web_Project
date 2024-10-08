@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script&family=Mrs+Saint+Delafield&family=Poppins:wght@300&family=Secular+One&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-image: url('/Student-1/Images/pattern.png');
+}
+
+/*---------------------*/
+/* Main div for payment checkout*/
+.container{
+    
+    /* display: grid; */
+    position: absolute;
+    left: 20%;
+    top: 18%;
+    /* height: 240%; */
+    width: 60%;
+    background-color: #dbd5d5;
+    border-radius: 15px;
+    margin: auto;
+    box-shadow: 13px 13px 20px #cbced1 , -13px -13px 20px #fff;
+
+}
+input{
+    width: 320px;
+    height: 30px;
+    padding: 1px 10px;
+}
+select{
+    width: 175px;
+    height: 30px;
+}
+
+.half-width{
+    padding: 20px;
+}
+.order-details,.payment-details,.billing-details,.contact-details,.billing-head{
+    background-color: #fff;
+    margin: 1%;
+}
+.first-row,.second-row,.third-row,.fourth-row,.fifth-row,.sixth-row{
+    display: flex; 
+}
+.container h3{
+    color: blueviolet;
+}
+#payment-details-heading{
+    display: flex;
+    justify-content: space-between;
+}
+.save-close-buttons{
+    display: flex;
+    margin: 1%;
+    justify-content: space-between;
+}
+.save-close-buttons a,.save-close-buttons input{
+    border: 2px solid rgb(206, 238, 24);
+    padding: 2px 100px;
+    text-decoration: none;
+    background-color: none;
+    color: rgb(235, 196, 27);
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.save-close-buttons a:hover,.save-close-buttons input:hover{
+    background-color: rgb(235, 196, 27);
+    color: #fff;
+}
+.payment-buttons{
+    background-color: #fff;
+    display: flex;
+    margin: 1%;
+    justify-content: space-between;
+}
+.payment-buttons a,.payment-buttons input{
+    border: 2px solid red;
+    padding: 2px 100px;
+    text-decoration: none;
+    background-color: none;
+    transition: .4s;
+    color: red;
+    font-weight: 700;
+    cursor: pointer;
+}
+.payment-buttons a:hover,.payment-buttons input:hover{
+    background-color: red;
+    color: #fff;
+}
+#pay-now{
+    opacity: 0.3;
+}
+#cvc-number{
+    width: 120px;
+}
+.star{
+    color: red;
+}
+.order-details{
+    padding-right: 50px;
+}
+.footer{
+    color: #fff;
+    text-align: center;
+    height: 10vh;
+    margin: 1%;
+    background-color: blueviolet;
+    letter-spacing: 1px;
+}
+/*------- Error notification ------*/
+
+.error-notification{
+    position: fixed;
+    top: 0%;
+    right: 10%;
+    background-color: #fff;
+    padding: 8px 50px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s,top 0.2s, visibility 0.2s;
+    color: red;
+    font-weight: 700;
+    box-shadow: 6px 6px 30px #3a3636 , -6px -6px 30px #d3b9b9;
+}
+.error-notification.active{
+    top: 2%;
+    visibility: visible;
+    opacity: 1
+}
+/* ---- Expanding the bill and contact details---- */
+
+.billing-details, .sixth-row,.seventh-row{
+    display: none;
+    visibility: hidden;
+}
+.billing-details.hide,.seventh-row.hide{
+    display:block;
+    visibility: visible;
+}
+
+.sixth-row.hide{
+    display: flex;
+    visibility: visible;
+}
+
+#edit-icon,#edit-icon2{
+    cursor: pointer;
+    transition: .2s
+}
+#edit-icon:hover,#edit-icon2:hover{
+    color: red;
+}
+.address-expand,.contact-expand{
+    display: flex;
+    justify-content: space-between;
+}
+ /*-------------------------------------*/
+
+ /*-------------- Rigt button showing ---------------*/
+#bill-right-icon,#contact-right-icon{
+    color: #000;
+}
+#right-icon1,#right-icon3,#right-icon4{
+    visibility: hidden;
+}

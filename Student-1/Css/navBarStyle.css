@@ -1,0 +1,103 @@
+
+/*-------- Nav bar styling ---------*/
+
+html {
+    scroll-behavior: smooth;
+  }
+.navbar{
+    float: right;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    right: 0;
+    padding-right: 10px;
+    font-weight: 800;
+  }
+  
+  .navbar li{
+    display: inline-block;
+    padding: 20px;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    transition: all .2s ease-in-out;
+  }
+  
+  .logo{
+    float: left;
+    padding: 20px;
+  }
+  .header{
+    background-image: url('/Images/pattern.png');
+    background-size: cover;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  }
+  #shop{
+    background-color: #deaaff;
+    border-radius: 25px;
+    display: inline-block;
+    color: black;
+    padding: 14px 40px;
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+      
+  }
+  #shop:hover{
+    transform: scale(1.1);
+    display: inline-block;
+  }
+  
+  .underline::after{
+    content: '';
+    position:absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #deaaff;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+    }
+    
+  .underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .underline {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: black;
+  }
+  
+  @keyframes animate{
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+  }
+
+   /*---------- Footer styling---------*/
+
+footer{
+  background: radial-gradient(#281c32,#0f0510);
+  color: #fff;
+  padding: 5vh 0;
+
+  text-align: center;
+
+  position: relative;
+
+ }
+    
+small{
+  opacity: 0.6;
+  font-weight: 300;  
+}
+small a{
+  color: skyblue;
+}

@@ -1,0 +1,204 @@
+/*page editor*/
+
+.student{
+    height: 20vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #000;
+}
+
+.student_info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 550px;
+    height: 430px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 5px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.student_info .page_editor_title{
+    font-weight: 700;
+    font-size: 50px;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.student_info .student_name, .student_info .student_role{
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0 5px;
+}
+
+.student_info .student_text{
+    margin: 25px 0;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.bottom_btn .button{
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 15px 30px;
+    background: #deaaff;
+    color: #fff;
+    outline: none;
+    border: none;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition: all 0.5s;
+}
+
+.bottom_btn span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.bottom_btn span a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+}
+
+.bottom_btn span:after{
+    content: '\021E9';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+.bottom_btn .button:hover span{
+    padding-right: 25px;
+}
+
+.bottom_btn .button:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
+
+
+
+/*quiz details section, student details sectionn and team sports section in page editor*/
+
+section .quiz_details, 
+section .student_details_section, 
+section .team_sports_section{
+    min-height: 100vh;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    padding: 10% 9%;
+    
+}
+
+.quiz_details .content, 
+.student_details_section .content, 
+.team_sports_section .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-size: cover;
+    background-position: center;
+}
+
+.quiz_details .quiz_text, .team_sports_section .team_sports_text{
+    margin-left: 140px;
+}
+
+.student_details_section .student_details_text{
+    margin-right: 140px;
+
+}
+
+
+.quiz_details .quiz_text .title, 
+.student_details_section .student_details_text .title, 
+.team_sports_section .title{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 0%;
+}
+
+.quiz_details .quiz_text .point, 
+.student_details_section .student_details_text .point, 
+.team_sports_section .point{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+/* Reference - How To Animate Buttons - https://www.w3schools.com/howto/howto_css_animate_buttons.asp */
+.quiz_details .button, 
+.student_details_section .button, 
+.team_sports_section .button{
+    font-weight: 500;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 10px 25px;
+    background: #deaaff;
+    color: #fff;
+    outline: none;
+    border: none;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 30px;
+    transition: all 0.5s;
+}
+
+.quiz_details span, 
+.student_details_section span, 
+.team_sports_section span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.quiz_details span a, 
+.student_details_section span a, 
+.team_sports_section span a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+}
+
+.quiz_details span:after, 
+.student_details_section span:after, 
+.team_sports_section span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+.quiz_details .button:hover span, 
+.student_details_section .button:hover span, 
+.team_sports_section .button:hover span{
+    padding-right: 25px;
+}
+
+.quiz_details .button:hover span:after, 
+.student_details_section .button:hover span:after, 
+.team_sports_section .button:hover span:after{
+    opacity: 1;
+    right: 0;
+}

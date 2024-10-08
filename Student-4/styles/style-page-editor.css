@@ -1,0 +1,68 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  margin-top: 7%;
+  margin-left: 45%;
+}
+.container h1{
+  font-family: 'Poppins';
+  font-size: 45px;
+  text-decoration: underline;
+}
+hr{
+  width: 100%;
+  border: 1px solid black;
+}
+.myInfo #myInfo{
+  margin-left: 38%;
+  padding: 5px;
+  font-family: 'Poppins';
+  font-size: 20px;
+}
+.myInfo #myInfo #p1,#p2{
+    margin-left: 10%;
+}
+.myInfo #myInfo #p3{
+  margin-left: 2%;
+}
+.content{
+  margin-left: 38%;
+  padding: 5px;
+  font-family: 'Poppins';
+  font-size: 20px;
+  margin-top: 10px;
+}
+.content ul{
+  padding-top: 4%;
+}
+.content p{
+  font-weight: bold;
+}
+.content a{
+  margin-left: 8%;
+}
+/* Reference for CSS arrow - https://www.w3schools.com/howto/howto_css_arrows.asp */
+.arrow-down{
+  border: solid black;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 5px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.arrow-down{
+  margin-left: 0.5%;
+  
+}
+footer{
+  background: #deaaff;
+  padding: 5vh 0;
+  text-align: center;
+  position: relative;
+}
+small{
+  opacity: 0.5;
+  font-weight: 300;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/Student-2/Assets/tonicicon.ico">
+
+    <!-- external css file -->
+    <link rel="stylesheet" href="css_charith/style.css">
+    <link rel="stylesheet" href="css_charith/quiz.css">
+
+    <title>Sports Quiz</title>
+</head>
+<body style="background-image: url(/Student-3/images/pattern.png);">
+    <!-- navigation bar -->
+    <div class="header">
+        <div class="logo">
+            <a href="/Student-2/Index.html"><img src="images/tonic_logo.png" width="90" alt="logo"></a>
+        </div>
+        <ul class="navbar"> 
+            <li><a id="shop" href="/Student-1/buy.html">Shop</a></li>
+            <li><a class="underline" href="/Student-2/Index.html">Home</a></li>
+            <li><a class="underline" href="/Student-2/comments.html">Comments</a></li>
+            <li><a class="underline" href="/Student-3/quiz.html">Quiz</a></li>
+            <li><a class="underline" href="/Student-4/sitemap.html">Site Map</a></li>
+            <li><a class="underline" href="/Student-4/image-gallery.html">Gallery</a></li>
+            <li><a class="underline" href="/Student-3/student_details.html">About Us</a></li>                              
+        </ul>
+    </div>
+
+    <div class="quiz_section">
+        <!-- start quiz -->
+        <div class="start_quiz">
+            <div class="rule_topic">
+                <span>Instructions for Quiz</span>
+            </div>
+
+            <div class="rule_points">
+                <div class="point">1. There are <span>10 sport related questions</span> in this quiz.</div>
+                <div class="point">2. You only have <span>60 seconds</span>.</div>
+                <div class="point">3. Once you start the quiz, you can't quit from the quiz.</div>
+                <div class="point">4. The "<span>Next Qeustion</span>" button will appears only after selecting an answer to the current question.</div>
+                <div class="point">5. Timer will start after clicking "<span>Start Quiz</span>" button.</div>
+            </div>
+
+            <div class="start_btn">
+                <button><span>Start Quiz</span></button>
+            </div>
+        </div>
+
+        <!-- question section -->
+        <div class="question_section">
+            <header>
+                <div class="countdown">
+                    <div class="countdown_text">Time : </div>
+                    <div class="countdown_number">60</div>
+                </div>
+                <div class="question_count">
+                    <!-- Question count will display here using JS -->
+                </div>
+            </header>
+
+            <div class="content_section">
+                <div class="question_text">
+                    <!-- Sports mcq question will display here using JS array -->
+                </div>
+                <div class="answer_list">
+                    <!-- Display relevant mcq question options using JS array -->
+                </div>
+            </div>
+
+            <!-- Display "Next Question" button only after selecting answer for current question -->
+            <footer>
+                <button class="next_question"><span>Next Question</span></button>
+            </footer>
+        </div>
+
+        <!-- result section -->
+        <div class="result_section">
+            <div class="result_topic">
+                <span>Quiz Result</span>
+            </div>
+
+            <div class="wrong_count">
+                <!-- Wrong answer count will display here using JS -->
+            </div>
+            <div class="score_text">
+                <!-- Score will display here using JS -->
+            </div>
+            <div class="grade_text">
+                <!--  Score grade will display here using JS -->
+            </div>
+            <div class="time_count">
+                <!-- Spent time count will display here using JS -->
+            </div>
+            <div class="performance_text">
+                <!-- Score grading based performance message will display here using JS -->
+            </div>
+            <div class="button">
+                <button class="restart_button"><span>Restart Quiz</span></button>
+            </div>
+        </div>
+    </div>
+        <footer class="main_footer">
+            <small>Developed by  <a href="page_editor.html"> Charith Jeewantha</a></small>
+        </footer>
+    
+
+    <!-- External javascript files -->
+    <script src="js_charith/quiz.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+/* team sports */
+
+.team_sports{
+    align-items: center;
+    float: right;
+    margin-top: 5%;
+    padding: 5% 8%;
+    position: relative;
+}
+
+.team_sports .text_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.team_sports .team_sports_text{
+    margin-right: 50px;
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.team_sports .text_content .title{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 60px;
+    margin: 0;
+}
+
+.team_sports .team_sports_text .intro{
+    font-weight: 500;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+.team_sports_btn .button{
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background: #deaaff;
+    color: #fff;
+    outline: none;
+    border: none;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 30px;
+    transition: all 0.5s;
+}
+
+.team_sports_btn span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.team_sports_btn span a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+}
+
+.team_sports_btn span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+.team_sports_btn .button:hover span{
+    padding-right: 25px;
+}
+
+.team_sports_btn .button:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
+.team_sports_details{
+    align-items: center;
+    float: right;
+    margin-top: 10%;
+    padding: 10% 8%;
+    position: relative;
+    height: 100vh;
+}
+
+.team_sports_details .team_sports_text .title{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+}
+
+.team_sports_details .team_sports_text .details{
+    font-weight: 500;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+.team_sports_details .team_sports_text .examples{
+    display: inline;
+}
+
+.team_sports_details .team_sports_text .examples .point{
+    padding-left: 7%;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+
+/* team games  */
+
+.team_games{
+    align-items: center;
+    float: right;
+    position: relative;
+    max-height: 100vh;
+}
+
+.team_games .title{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    padding-top: 8%;
+}
+
+
+.team_games .cards-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0% 6%;
+}
+
+.team_games .cards-container .card{
+    text-align: center;
+    margin: 30px;
+    padding: 30px 20px;
+    background: #fff;
+    border:1px solid rgba(0,0,0,.2);
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.3s ease-in;
+    width: 100%;
+}
+
+.team_games .cards-container .card h3{
+    text-transform: capitalize;
+    font-size: 25px;
+    color: #333333;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.team_games .cards-container .card p{
+    font-size: 13px;
+    color: #000;
+    padding:1rem 0;
+}
+
+.team_games .cards-container .card:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.team_games_btn .button{
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #deaaff;
+    color: #fff;
+    outline: none;
+    border: none;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+
+.team_games_btn span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.team_games_btn span a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    color: #fff;
+}
+
+.team_games_btn span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+.team_games_btn .button:hover span{
+    padding-right: 25px;
+}
+
+.team_games_btn .button:hover span:after{
+    opacity: 1;
+    right: 0;
+}

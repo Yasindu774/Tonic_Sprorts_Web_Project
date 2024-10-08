@@ -1,0 +1,404 @@
+/* start quiz */
+
+.quiz_section{
+    height: 100vh;
+}
+
+.start_quiz{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 550px;
+    background: #fff;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.start_quiz.hideInstructions, .question_section, .result_section{
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+    pointer-events: none;
+}
+
+
+.question_section.displayQuestions, .result_section.displayResult{
+    z-index: 5;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+}
+
+.start_quiz .rule_topic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 40px;
+    height: 50px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 30px;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+    background: #deaaff;
+}
+
+.start_quiz .rule_points{
+    padding: 20px 35px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.start_quiz .rule_points .point{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.start_quiz .rule_points .point span{
+    font-weight: 600;
+}
+
+.start_quiz button{
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 15px 35px;
+    background: #deaaff;
+    color: #fff;
+    outline: none;
+    border: none;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 10px;
+    transition: all 0.5s;
+}
+
+.start_quiz button span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.start_quiz button span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.start_quiz button:hover span{
+    padding-right: 25px;
+}
+
+.start_quiz button:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
+@media (max-width: 650px){
+    .start_quiz{
+        width: 80%;
+        margin: 1%;
+    }
+}
+
+
+/* question_section */
+
+.question_section{
+    width: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 40px;
+}
+
+.question_section header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    position: relative;
+    z-index: 99;
+    padding: 0 30px;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+    background-color: #f4e3ff;
+}
+
+.question_section header .countdown{
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 130px;
+    height: 45px;
+    background: #fff;
+    padding: 0 15px;
+    border: none ;
+    background-color: #f4e3ff;
+}
+
+.question_section header .countdown .countdown_text{
+    font-weight: 400;
+    font-size: 18px;
+    user-select: none;
+}
+
+.question_section header .countdown .countdown_number{
+    font-weight: 600;
+    font-size: 18px;
+    background: #d8a3fc;
+    user-select: none;
+    height: 40px;
+    width: 40px;
+    color: #000;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.question_section header .question_count span{
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.question_section header .question_count span p{
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 5px;
+}
+
+.question_section .content_section{
+    background: #fff;
+    padding: 30px 35px 5px 35px;
+}
+
+.question_section .content_section .question_text{
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.question_section .content_section .answer_list{
+    display: block;
+    padding: 10px 0px;
+}
+
+.question_section .content_section .answer_list .answer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border: 2px solid lightgray;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    padding: 8px 25px;
+    transition: 0.4s ease;
+    cursor: pointer;
+    width: 100%;
+}
+
+.question_section .content_section .answer_list .answer:hover{
+    border-color: #c569ff;
+    background: #e9ccfc;
+    color: #000;
+}
+
+.question_section .content_section .answer_list .answer.correct{
+    background: #d4edda;
+    color: #155724;
+    border-radius: 30px;
+    border: 2px solid #0f7025;
+}
+
+.question_section .content_section .answer_list .answer.incorrect{
+    background: #f8d7da;
+    color: #a42834;
+    border-radius: 30px;
+    border: 2px solid #bd1021;
+}
+
+.question_section .content_section .answer_list .answer.lock{
+    pointer-events: none;
+}
+
+.question_section footer{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    height: 60px;
+    padding: 0 30px;
+    border-top: 1px solid lightgray;
+}
+
+.question_section footer .next_question{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 15px;
+    background: #deaaff;
+    color: #fff;
+    outline: none;
+    border: none;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 10px;
+    transition: all 0.5s;
+    right: 0px;
+    display: none;
+}
+
+.question_section footer .next_question span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.question_section footer .next_question span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.question_section footer .next_question:hover span{
+    padding-right: 25px;
+}
+
+.question_section footer .next_question:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
+
+
+/* result_section */
+
+.result_section{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background: #deaaff;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.result_section .result_topic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+    height: 50px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 30px;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+    background: #e9ccfc;
+}
+
+.result_section .wrong_count span,
+.result_section .score_text span,
+.result_section .grade_text span,
+.result_section .time_count span,
+.result_section .performance_text span{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.result_section .performance_text span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 8px 25px;
+    transition: 0.4s ease;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+}
+
+.result_section .question_count span p,
+.result_section .wrong_count span p,
+.result_section .score_text span p,
+.result_section .grade_text span p,
+.result_section .time_count span p{
+    font-weight: 600;
+    padding: 0 4px;
+}
+
+.result_section .restart_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 15px;
+    background: #fff;
+    color: #000;
+    outline: none;
+    border: none;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 10px;
+    transition: all 0.5s;
+    right: 0px;
+}
+
+.result_section .restart_button span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.result_section .restart_button span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.result_section .restart_button:hover span{
+    padding-right: 25px;
+}
+
+.result_section .restart_button:hover span:after{
+    opacity: 1;
+    right: 0;
+}

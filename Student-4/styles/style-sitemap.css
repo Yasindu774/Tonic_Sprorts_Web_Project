@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ body{
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-color: #E9ECE6;
+} 
+ #title{
+    font-size: 45px;
+    fill: black;
+    text-align: center;
+    text-decoration: underline;
+    position: absolute;
+}
+
+.table{
+    position: absolute; 
+    left: 1%;
+    top: 10%;
+    
+}
+
+text{
+
+    font-family: 'Poppins';
+    fill: #e7e7e7;;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+}
+/* Reference for CSS button animation - https://www.w3schools.com/howto/howto_css_animate_buttons.asp */
+#home-page{
+    fill:#555555;
+    transition: 0.3s; 
+}
+#content-page{
+    fill: #58469d;
+    transition: 0.3s;
+}
+#buy-products{
+    fill: #fb9a2f;
+    transition: 0.3s;
+}
+#quary-form{
+    fill: #41670b;
+    transition: 0.3s;
+}
+#quiz{
+    fill: #df5352;
+    transition: 0.3s;
+}
+#student-details{
+    fill: #2f78e1;
+    transition: 0.3s;
+}
+#sitemap{
+    fill:#0a797c;
+    transition: 0.3s;
+}
+#gallery{
+    fill:#ff0181;
+    transition: 0.3s;
+}
+#home-page:hover{
+  fill: #a7f539;
+}
+#content-page:hover{
+  fill: #a7f539;
+}
+#buy-products:hover{
+  fill: #a7f539;
+}
+#quary-form:hover{
+  fill: #a7f539;
+}
+#quiz:hover{
+  fill: #a7f539;
+}
+#student-details:hover{
+  fill: #a7f539;
+}
+#sitemap:hover{
+  fill: #a7f539;
+}
+#gallery:hover{
+  fill: #a7f539; 
+}
+
+line{
+    stroke: black;
+    stroke-width: 1px;
+} 
+svg{
+    padding-top: 10px;
+}
+footer{
+  background: #deaaff;
+  padding: 5vh 0;
+  margin-top: 45%;
+  text-align: center;
+}
+small{
+  opacity: 0.5;
+  font-weight: 300;
+}
